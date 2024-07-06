@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: KarlaNormal;
+  src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: hsl(148, 38%, 91%);
+  font-family: KarlaNormal, "sans-serif";
+  font-size: 16px;
+}
+
+main {
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 15px;
+  padding: 20px;
+  color: hsl(187, 24%, 22%);
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.input-div {
+  margin-bottom: 30px;
+}
+
+.error-text,
+.error-email {
+  display: none;
+}
+
+.text-input,
+.msg-input,
+.radio-div,
+button {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.text-input,
+.msg-input,
+.radio-div {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+
+.radio-div,
+.checkbox-div {
+  display: flex;
+  gap: 10px;
+}
+
+.two-radios-div {
+  margin: 20px 0;
+}
+
+.radio-div {
+  margin-bottom: 10px;
+}
+
+.msg-input {
+  height: 270px;
+  /* text-align: initial; */
+}
+
+.checkbox-div {
+  margin: 25px 0;
+}
+
+button {
+  background-color: hsl(169, 82%, 27%);
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  color: white;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
