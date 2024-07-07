@@ -18,7 +18,7 @@ body {
 main {
   background-color: white;
   border-radius: 10px;
-  margin: 20px 15px;
+  margin: 35px 15px 30px 15px;
   padding: 20px;
   color: hsl(187, 24%, 22%);
 }
@@ -36,7 +36,7 @@ p {
 }
 
 .input-div {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .error-text,
@@ -60,6 +60,12 @@ button {
   border: 1px solid grey;
 }
 
+.two-inputs-div,
+.two-radios-div {
+  display: flex;
+  flex-direction: column;
+}
+
 .radio-div,
 .checkbox-div {
   display: flex;
@@ -67,15 +73,12 @@ button {
 }
 
 .two-radios-div {
-  margin: 20px 0;
-}
-
-.radio-div {
-  margin-bottom: 10px;
+  margin: 20px 0 35px 0;
+  gap: 15px;
 }
 
 .msg-input {
-  height: 270px;
+  height: 290px;
   /* text-align: initial; */
 }
 
@@ -86,10 +89,71 @@ button {
 button {
   background-color: hsl(169, 82%, 27%);
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   height: 45px;
   color: white;
   font-weight: 700;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.attribution {
+  margin-top: 5px;
+  /* display: none; */
+}
+
+@media (min-width: 575px) {
+  body {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* padding: 35px 20px; */
+  }
+
+  main {
+    width: 545px;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    align-items: center;
+  }
+
+  main {
+    width: 575px;
+    /* height: 650px; */
+  }
+
+  .two-inputs-div,
+  .two-radios-div {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .two-inputs-div div {
+    flex-grow: 1;
+  }
+
+  .two-radios-div {
+    margin: 15px 0 20px 0;
+  }
+
+  .input-div {
+    margin-bottom: 15px;
+  }
+
+  .msg-input {
+    height: 110px;
+    /* text-align: initial; */
+  }
+
+  .checkbox-div {
+    margin: 20px 0;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
 }
