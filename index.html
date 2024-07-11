@@ -30,60 +30,71 @@
   <body>
     <main>
       <h1>Contact Us</h1>
-      <div class="two-inputs-div">
-        <div class="input-div">
-          <p>First Name *</p>
-          <input type="text" class="text-input" />
-          <p class="error-text">This field is required</p>
-        </div>
-
-        <div class="input-div">
-          <p>Last Name *</p>
-          <input type="text" class="text-input" />
-          <p class="error-text">This field is required</p>
-        </div>
-      </div>
-
-      <div class="input-div">
-        <p>Email Address *</p>
-        <input type="text" class="text-input" />
-        <p class="error-email">Please enter a valid email address</p>
-      </div>
-
-      <div class="query-div">
-        <p>Query Type *</p>
-        <div class="two-radios-div">
-          <div class="radio-div">
-            <input type="radio" name="" id="radio-1" />
-            <p>General Enquiry</p>
+      <form action="">
+        <div class="two-inputs-div">
+          <div class="input-div">
+            <p>First Name *</p>
+            <input type="text" class="text-input" id="fname-input" />
+            <p class="error-text hidden" id="fname-error-text">
+              This field is required
+            </p>
           </div>
 
-          <div class="radio-div">
-            <input type="radio" name="" id="radio-2" />
-            <p>Support Request</p>
+          <div class="input-div">
+            <p>Last Name *</p>
+            <input type="text" class="text-input" id="lname-input" />
+            <p class="error-text hidden" id="lname-error-text">
+              This field is required
+            </p>
           </div>
         </div>
 
-        <p class="error-text">Please select a query type</p>
-      </div>
-
-      <div class="msg-div">
-        <p>Message *</p>
-        <textarea class="msg-input"></textarea>
-        <p class="error-text">This field is required</p>
-      </div>
-
-      <div class="consent-div">
-        <div class="checkbox-div">
-          <input type="checkbox" name="" id="" />
-          <p>I consent to being contacted by the team *</p>
+        <div class="input-div">
+          <p>Email Address *</p>
+          <input type="email" class="text-input" id="email-input" />
+          <p class="error-text hidden" id="email-error-text">
+            Please enter a valid email address
+          </p>
         </div>
-        <p class="error-text">
-          To submit this form, please consent to being contacted
-        </p>
-      </div>
 
-      <button type="submit">Submit</button>
+        <div class="query-div">
+          <p id="query-type">Query Type *</p>
+          <div class="two-radios-div">
+            <div class="radio-div" id="general-enquiry-div">
+              <input type="radio" name="" id="radio-1" />
+              <p>General Enquiry</p>
+            </div>
+
+            <div class="radio-div" id="support-request-div">
+              <input type="radio" name="" id="radio-2" />
+              <p>Support Request</p>
+            </div>
+          </div>
+
+          <p class="error-text hidden" id="query-error-text">
+            Please select a query type
+          </p>
+        </div>
+
+        <div class="msg-div">
+          <p>Message *</p>
+          <textarea class="msg-input"></textarea>
+          <p class="error-text hidden" id="msg-error-text">
+            This field is required
+          </p>
+        </div>
+
+        <div class="consent-div">
+          <div class="checkbox-div">
+            <input type="checkbox" name="" id="checkbox" />
+            <p>I consent to being contacted by the team *</p>
+          </div>
+          <p class="error-text hidden" id="consent-error-text">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </main>
 
     <!-- Success message -->

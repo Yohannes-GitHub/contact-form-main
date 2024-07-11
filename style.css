@@ -48,9 +48,12 @@ p {
   margin-bottom: 10px;
 }
 
-.error-text,
-.error-email {
-  /* display: none; */
+.error {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+
+.error-text {
+  color: hsl(0, 66%, 54%);
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -88,7 +91,7 @@ button {
 }
 
 .radio-div p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .two-radios-div {
@@ -98,8 +101,8 @@ button {
 
 #radio-1,
 #radio-2 {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   margin: 0 5px 0 10px;
   opacity: 0.5;
 }
@@ -146,19 +149,17 @@ button {
 
   main {
     width: 540px;
-    /* min-height: 560px; */
-    max-height: 660px;
     padding: 25px 35px;
     border-radius: 11px;
   }
 
   h1 {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
   }
 
   p {
     font-size: 0.9rem;
-    margin: 6px 0;
+    margin: 8px 0;
   }
 
   .two-inputs-div,
@@ -167,8 +168,21 @@ button {
     gap: 15px;
   }
 
+  .error-text {
+    margin-bottom: 0;
+  }
+
   .two-inputs-div div {
     flex-grow: 1;
+  }
+
+  #query-type {
+    margin-bottom: 13px;
+  }
+
+  .query-div .error-text {
+    margin-top: 12px;
+    margin-bottom: 5px;
   }
 
   .two-radios-div {
@@ -176,13 +190,13 @@ button {
   }
 
   .input-div {
-    margin-bottom: 5px;
+    margin-bottom: 13px;
   }
 
   .text-input,
   .radio-div,
   .msg-input {
-    height: 36px;
+    height: 35px;
     border-radius: 5px;
   }
 
@@ -192,18 +206,15 @@ button {
 
   .msg-div {
     margin-top: 5px;
+    margin-bottom: 25px;
   }
 
   .msg-input {
-    height: 70px;
+    height: 73px;
   }
 
   .consent-div {
-    margin: 5px 0 25px 0;
-  }
-
-  .checkbox-div {
-    margin: 15px 0 0 0;
+    margin: 0px 0 30px 0;
   }
 
   .checkbox-div p {
@@ -211,8 +222,8 @@ button {
   }
 
   button {
-    margin-top: 15px;
-    height: 45px;
+    /* margin-top: 90px; */
+    height: 46px;
     margin: 0;
   }
 }
