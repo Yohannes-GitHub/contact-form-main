@@ -23,9 +23,7 @@ body {
 main {
   background-color: white;
   border-radius: 15px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  margin: 30px 15px 20px 15px;
+  margin: 25px 14px 7px 14px;
   padding: 20px;
   color: hsl(187, 24%, 22%);
 }
@@ -35,25 +33,21 @@ main {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1.7rem;
 }
 
 p {
-  margin: 10px 0;
-  font-size: 0.95rem;
+  margin: 9px 0;
+  font-size: 0.8rem;
 }
 
-.input-div {
+.input-div input {
   margin-bottom: 10px;
 }
 
 #query-type {
   margin: 15px 0;
-}
-
-.error {
-  border: 1px solid hsl(0, 66%, 54%);
 }
 
 .error-text {
@@ -63,12 +57,12 @@ p {
 }
 
 .text-input,
-.msg-input {
+#msg-input {
   font: inherit;
 }
 
 .text-input,
-.msg-input,
+#msg-input,
 .radio-div,
 button {
   padding: 0 18px;
@@ -76,11 +70,15 @@ button {
 }
 
 .text-input,
-.msg-input,
+#msg-input,
 .radio-div {
-  height: 50px;
+  height: 40px;
   border-radius: 8px;
   border: 1px solid hsl(186, 15%, 59%);
+}
+
+.error {
+  border: 1px solid hsl(0, 66%, 54%);
 }
 
 .two-inputs-div,
@@ -101,12 +99,12 @@ button {
 }
 
 .radio-div p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .two-radios-div {
   margin: 10px 0 15px 0;
-  gap: 12px;
+  gap: 14px;
 }
 
 #radio-1,
@@ -114,6 +112,17 @@ button {
   width: 17px;
   height: 17px;
   opacity: 0.5;
+}
+
+.checkbox-div {
+  gap: 15px;
+  line-height: 1.5;
+}
+
+#checkbox {
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
 }
 
 input[type="radio"]:checked,
@@ -130,13 +139,17 @@ input[type="radio"] + label img {
 }
 
 #checkbox + label img {
-  width: 13px;
-  height: 12px;
+  width: 15px;
+  height: 14px;
   margin-top: 4px;
 }
 
-.msg-input {
-  height: 230px;
+.msg-div {
+  margin-top: 20px;
+}
+
+#msg-input {
+  height: 200px;
   padding: 10px 18px;
 }
 
@@ -152,18 +165,18 @@ button {
   background-color: hsl(169, 82%, 27%);
   border: none;
   border-radius: 6px;
-  height: 50px;
+  height: 45px;
   color: white;
   font-weight: 700;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 @media (min-width: 575px) {
   body {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 35px 20px;
   }
 
@@ -196,7 +209,7 @@ button {
   }
 
   .text-input,
-  .msg-input {
+  #msg-input {
     font-size: 0.95rem;
     opacity: 0.73;
     line-height: 1.4;
@@ -241,7 +254,7 @@ button {
 
   .text-input,
   .radio-div,
-  .msg-input {
+  #msg-input {
     height: 35px;
     border-radius: 5px;
   }
@@ -250,12 +263,20 @@ button {
     font-size: 1.05rem;
   }
 
+  .query-div {
+    margin-bottom: 17px;
+  }
+
+  .two-radios-div {
+    margin-top: 10px;
+  }
+
   .msg-div {
     margin-top: 5px;
     margin-bottom: 25px;
   }
 
-  .msg-input {
+  #msg-input {
     height: 75px;
   }
 
@@ -267,9 +288,15 @@ button {
     margin: 4px;
   }
 
+  #checkbox {
+    width: 13.5px;
+    height: 13.5px;
+  }
+
   button {
     height: 46px;
     margin: 0;
+    font-size: 0.95rem;
   }
 
   input:hover,
@@ -293,13 +320,13 @@ button {
   }
 
   #checkbox + label img {
-    width: 13px;
-    height: 13px;
+    width: 13.5px;
+    height: 13.5px;
     margin-top: 0;
   }
 
   #checkbox + label {
-    margin-top: 4px;
+    margin-top: 2.8px;
   }
 
   button:hover {

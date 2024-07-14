@@ -34,7 +34,12 @@
         <div class="two-inputs-div">
           <div class="input-div">
             <p>First Name *</p>
-            <input type="text" class="text-input" id="fname-input" />
+            <input
+              type="text"
+              class="text-input"
+              id="fname-input"
+              onchange="onChangeFname()"
+            />
             <p class="error-text hidden" id="fname-error-text">
               This field is required
             </p>
@@ -42,18 +47,27 @@
 
           <div class="input-div">
             <p>Last Name *</p>
-            <input type="text" class="text-input" id="lname-input" />
+            <input
+              type="text"
+              class="text-input"
+              id="lname-input"
+              onchange="onChangeLname()"
+            />
             <p class="error-text hidden" id="lname-error-text">
               This field is required
             </p>
           </div>
         </div>
-
         <div class="input-div">
           <p>Email Address *</p>
-          <input type="email" class="text-input" id="email-input" />
+          <input
+            type="text"
+            class="text-input"
+            id="email-input"
+            onchange="onChangeEmail()"
+          />
           <p class="error-text hidden" id="email-error-text">
-            Please enter a valid email address
+            This field is required
           </p>
         </div>
 
@@ -84,7 +98,7 @@
 
         <div class="msg-div">
           <p>Message *</p>
-          <textarea class="msg-input"></textarea>
+          <textarea id="msg-input" onchange="onChangeMsg()"></textarea>
           <p class="error-text hidden" id="msg-error-text">
             This field is required
           </p>
@@ -102,7 +116,7 @@
             To submit this form, please consent to being contacted
           </p>
         </div>
-        <button type="submit">Submit</button>
+        <button type="reset">Submit</button>
       </form>
     </main>
 
@@ -122,5 +136,7 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Yohannes Sintayehu</a>.
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
