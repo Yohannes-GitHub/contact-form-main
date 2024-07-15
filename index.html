@@ -27,10 +27,10 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="resetForm()">
     <main>
       <h1>Contact Us</h1>
-      <form action="">
+      <form action="" id="contact-form">
         <div class="two-inputs-div">
           <div class="input-div">
             <p>First Name *</p>
@@ -45,7 +45,7 @@
             </p>
           </div>
 
-          <div class="input-div">
+          <div class="input-div email-div">
             <p>Last Name *</p>
             <input
               type="text"
@@ -116,20 +116,20 @@
             To submit this form, please consent to being contacted
           </p>
         </div>
-        <button type="reset">Submit</button>
+        <button type="button">Submit</button>
       </form>
     </main>
 
     <!-- Success message -->
 
-    <!-- <div class="success-msg">
-      <div>
+    <div class="success-msg">
+      <div class="msg-sent">
         <img src="./assets/images/icon-success-check.svg" alt="" />
         <p>Message Sent!</p>
       </div>
 
       <p>Thanks for completing the form. We'll be in touch soon!</p>
-    </div> -->
+    </div>
 
     <div class="attribution">
       Challenge by

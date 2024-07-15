@@ -18,6 +18,7 @@ body {
 body {
   background-color: hsl(148, 38%, 91%);
   font-family: Karla, "sans-serif";
+  position: relative;
 }
 
 main {
@@ -78,7 +79,7 @@ button {
 }
 
 .error {
-  border: 1px solid hsl(0, 66%, 54%);
+  border: 1px solid hsl(0, 66%, 54%) !important;
 }
 
 .two-inputs-div,
@@ -172,6 +173,39 @@ button {
   font-size: 0.85rem;
 }
 
+/* Success Message styles */
+
+.success-msg {
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(148, 38%, 91%);
+  padding: 18px 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 5px;
+}
+
+.success-msg p {
+  margin: 0;
+}
+
+.success-msg > p {
+  opacity: 0.8;
+}
+
+.msg-sent {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.msg-sent p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Media Queries */
+
 @media (min-width: 575px) {
   body {
     display: flex;
@@ -189,6 +223,7 @@ button {
   html {
     font-size: 13.5px;
   }
+
   body {
     justify-content: center;
   }
@@ -213,6 +248,10 @@ button {
     font-size: 0.95rem;
     opacity: 0.73;
     line-height: 1.4;
+  }
+
+  .text-input {
+    margin-bottom: 0;
   }
 
   .two-inputs-div,
@@ -245,11 +284,19 @@ button {
   }
 
   .query-div {
-    margin: 5px 0 5px 0;
+    margin: 10px 0 5px 0;
+  }
+
+  .input-div input {
+    margin-bottom: 0;
   }
 
   .input-div {
-    margin-bottom: 13px;
+    margin-bottom: 0;
+  }
+
+  .email-div {
+    margin-bottom: 18px;
   }
 
   .text-input,
@@ -331,5 +378,9 @@ button {
 
   button:hover {
     background-color: hsl(167, 92%, 14%);
+  }
+
+  .success-msg {
+    top: 10%;
   }
 }

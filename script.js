@@ -5,6 +5,7 @@ const radio1 = document.getElementById("radio-1");
 const radio2 = document.getElementById("radio-2");
 const msg = document.getElementById("msg-input");
 const checkbox = document.getElementById("checkbox");
+const formToReset = document.getElementById("contact-form");
 const btn = document.getElementsByTagName("button");
 const input = document.getElementsByTagName("input");
 
@@ -35,27 +36,34 @@ function onChangeMsg() {
   msgError.classList.add("hidden");
 }
 
-btn[0].addEventListener("click", () => {
+function validation() {
+  let valid = true;
+
   if (fname.value === "") {
     fnameError.classList.remove("hidden");
     fname.classList.add("error");
+    valid = false;
   } else {
     fnameError.classList.add("hidden");
     fname.classList.remove("error");
+    valid = true;
   }
 
   if (lname.value === "") {
     lnameError.classList.remove("hidden");
     lname.classList.add("error");
+    valid = false;
   } else {
     lnameError.classList.add("hidden");
     lname.classList.remove("error");
+    valid = true;
   }
 
   if (email.value === "") {
     emailError.textContent = "This field is required";
     emailError.classList.remove("hidden");
     email.classList.add("error");
+    valid = false;
   } else {
     emailError.classList.add("hidden");
     const regex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
@@ -63,29 +71,49 @@ btn[0].addEventListener("click", () => {
       emailError.textContent = "Please enter a valid email";
       emailError.classList.remove("hidden");
       email.classList.add("error");
+      valid = false;
     } else {
       emailError.classList.add("hidden");
       email.classList.remove("error");
+      valid = true;
     }
   }
 
   if (!radio1.checked && !radio2.checked) {
     queryError.classList.remove("hidden");
+    valid = false;
   } else {
     queryError.classList.add("hidden");
+    valid = true;
   }
 
   if (msg.value === "") {
     msgError.classList.remove("hidden");
     msg.classList.add("error");
+    valid = false;
   } else {
     msgError.classList.add("hidden");
     msg.classList.remove("error");
+    valid = true;
   }
 
   if (!checkbox.checked) {
     checkboxError.classList.remove("hidden");
+    valid = false;
   } else {
     checkboxError.classList.add("hidden");
+    valid = true;
+  }
+  return valid;
+}
+
+function resetForm() {
+  formToReset.reset();
+}
+
+btn[0].addEventListener("click", () => {
+  validation();
+  if (validation()) {
+    resetForm();
   }
 });
