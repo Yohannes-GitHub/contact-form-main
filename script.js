@@ -115,7 +115,7 @@ function resetForm() {
 function toastMessage() {
   success.classList.remove("hidden");
   setTimeout(function () {
-    success.style.display = "none";
+    success.classList.add("hidden");
   }, 3000);
 }
 
