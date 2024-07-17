@@ -6,8 +6,9 @@ const radio2 = document.getElementById("radio-2");
 const msg = document.getElementById("msg-input");
 const checkbox = document.getElementById("checkbox");
 const formToReset = document.getElementById("contact-form");
-const btn = document.getElementsByTagName("button");
+const btn = document.getElementById("submit-btn");
 const input = document.getElementsByTagName("input");
+const success = document.getElementById("success-msg");
 
 const fnameError = document.getElementById("fname-error-text");
 const lnameError = document.getElementById("lname-error-text");
@@ -111,9 +112,17 @@ function resetForm() {
   formToReset.reset();
 }
 
-btn[0].addEventListener("click", () => {
+function toastMessage() {
+  success.classList.remove("hidden");
+  setTimeout(function () {
+    success.style.display = "none";
+  }, 3000);
+}
+
+btn.addEventListener("click", () => {
   validation();
   if (validation()) {
     resetForm();
+    toastMessage();
   }
 });

@@ -18,7 +18,6 @@ body {
 body {
   background-color: hsl(148, 38%, 91%);
   font-family: Karla, "sans-serif";
-  position: relative;
 }
 
 main {
@@ -27,6 +26,7 @@ main {
   margin: 25px 14px 7px 14px;
   padding: 20px;
   color: hsl(187, 24%, 22%);
+  position: relative;
 }
 
 .hidden {
@@ -189,7 +189,10 @@ button {
   padding: 18px 20px;
   border-radius: 10px;
   position: absolute;
-  top: 5px;
+  max-width: 367px;
+  top: -1%;
+  right: 15vw;
+  left: 15vw;
 }
 
 .success-msg p {
@@ -224,6 +227,12 @@ button {
 
   main {
     width: 505px;
+  }
+
+  .success-msg {
+    top: -5%;
+    right: 14%;
+    left: 14%;
   }
 }
 
@@ -385,6 +394,9 @@ button {
   }
 
   .success-msg {
-    top: 11.5%;
+    top: -13.8%;
+    right: 17%;
+    left: 17%;
+    /* max-width: 400px; */
   }
 }
