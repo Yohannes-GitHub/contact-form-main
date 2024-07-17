@@ -116,7 +116,7 @@ function toastMessage() {
   success.classList.remove("hidden");
   setTimeout(function () {
     success.classList.add("hidden");
-  }, 3000);
+  }, 5000);
   return false;
 }
 
