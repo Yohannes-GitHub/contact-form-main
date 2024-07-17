@@ -43,7 +43,7 @@ p {
   font-size: 0.8rem;
 }
 
-.input-div input {
+.input-div {
   margin-bottom: 10px;
 }
 
@@ -53,8 +53,7 @@ p {
 
 .error-text {
   color: hsl(0, 66%, 54%);
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 7px 0 0 0;
 }
 
 .text-input,
@@ -126,6 +125,10 @@ button {
   height: 16px;
 }
 
+#consent-error-text {
+  margin-top: 3px;
+}
+
 input[type="radio"]:checked,
 input[type="radio"]:not(:checked) + label,
 #checkbox:checked,
@@ -137,6 +140,11 @@ input[type="radio"] + label img {
   width: 17px;
   height: 17px;
   margin-top: 4.6px;
+}
+
+.radio-div:has(input[type="radio"]:checked) {
+  border: 1px solid hsl(169, 82%, 27%);
+  background-color: hsl(148, 38%, 91%);
 }
 
 #checkbox + label img {
@@ -287,14 +295,6 @@ button {
     margin: 10px 0 5px 0;
   }
 
-  .input-div input {
-    margin-bottom: 0;
-  }
-
-  .input-div {
-    margin-bottom: 0;
-  }
-
   .email-div {
     margin-bottom: 18px;
   }
@@ -331,6 +331,10 @@ button {
     margin: 0px 0 30px 0;
   }
 
+  .checkbox-div {
+    gap: 10px;
+  }
+
   .checkbox-div p {
     margin: 4px;
   }
@@ -357,7 +361,7 @@ button {
 
   input:hover,
   textarea:hover {
-    border: 1px solid green;
+    border: 1px solid hsl(169, 82%, 27%);
   }
 
   input[type="radio"] + label img {
@@ -381,6 +385,6 @@ button {
   }
 
   .success-msg {
-    top: 10%;
+    top: 11.5%;
   }
 }

@@ -68,7 +68,7 @@ function validation() {
     emailError.classList.add("hidden");
     const regex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
     if (!email.value.match(regex)) {
-      emailError.textContent = "Please enter a valid email";
+      emailError.textContent = "Please enter a valid email address";
       emailError.classList.remove("hidden");
       email.classList.add("error");
       valid = false;
