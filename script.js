@@ -117,6 +117,11 @@ function toastMessage() {
   setTimeout(function () {
     success.classList.add("hidden");
   }, 3000);
+  return false;
+}
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
 }
 
 btn.addEventListener("click", () => {
@@ -124,5 +129,6 @@ btn.addEventListener("click", () => {
   if (validation()) {
     resetForm();
     toastMessage();
+    scrollToTop();
   }
 });
